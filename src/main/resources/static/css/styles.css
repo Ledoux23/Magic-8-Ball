@@ -1,0 +1,80 @@
+/* Réinitialisation des marges et du rembourrage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Définir un arrière-plan ou une couleur de fond */
+body {
+    background-color: #f0f0f0; /* Couleur d'arrière-plan de la page */
+    font-family: Arial, sans-serif; /* Police de caractères par défaut */
+}
+
+/* Centrer le contenu vertical et horizontal */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centrer verticalement */
+}
+
+/* Style pour le conteneur principal (formulaire) */
+#question-form {
+    text-align: center;
+    background-color: #fff; /* Couleur de fond du formulaire */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Ombre pour le formulaire */
+    max-width: 400px; /* Largeur maximale du formulaire */
+    width: 100%;
+}
+
+/* Style pour le champ de question */
+#question {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style pour le bouton "Submit" */
+button[type="submit"] {
+    background-color: #007bff; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style pour la réponse */
+#response {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(0, 128, 0); /* Couleur du texte de la réponse */
+}
+
+/* Style pour le titre "Magic 8-Ball" */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333; /* Couleur du texte du titre */
+}
+
+/* Style pour le lien non visité (optionnel) */
+a {
+    color: rgb(0, 128, 0);
+    text-decoration: none;
+}
+
+/* Style pour le lien visité (optionnel) */
+a:visited {
+    color: #333;
+}
