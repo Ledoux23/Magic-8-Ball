@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Ajoutez vos balises meta, titres et liens ici -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8-Ball</title>
+    <!-- Inclure jQuery (assurez-vous de télécharger jQuery ou utilisez un CDN) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <h1>Magic 8-Ball</h1>
+    <form id="question-form">
+        <label for="question">Enter your question:</label>
+        <input type="text" id="question" name="question" required>
+        <button type="submit">Ask</button>
+    </form>
+    <div id="response"></div>
+
+    <script>
+        $(document).ready(function () {
+            $('#question-form').submit(function (event) {
+                event.preventDefault();
+                var question = $('#question').val();
+
+                $.ajax({
+                    url: '/ask',
+                    type: 'POST',
+                    data: { question: question },
+                    success: function (data) {
+                        displayResponse(data);
+                    },
+                    error: function (error) {
+                        console.error(error);
+                    }
+                });
+            });
+
+            function displayResponse(response) {
+                $('#response').text(response);
+            }
+        });
+    </script>
+</body>
+</html>
